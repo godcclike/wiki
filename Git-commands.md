@@ -31,4 +31,4 @@ git checkout pats-fx-oms-app-global-qa
 git merge testingmerge        (merge from testingmerge to pats-fx-oms-app-global-qa branch)
 ```
 
-
+- git log --oneline     (to check the previous commits and the head)

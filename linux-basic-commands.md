@@ -59,5 +59,18 @@ kill <process id>                          (to kill a specific process)
 find . -name "application.properties"      (to find a certain file name in this directory)
 history | grep "java"                      (to find certain commands that you have typed in earlier)
 tail -n 500 adaptor.logs > DBS-logs.txt    (to show the last 500 lines of the log file and put it in another txt file)
+sudo rpm -ivh sample_file.rpm                (to install RPM file using rpm command)
 ```
 
+## To check opened vi session file and kill the session
+```Shell
+ps -ef | grep vi
+kill -9 17248
+“17248 = session id”
+```
+
+## To run the .jar file
+```Shell
+java -server –jar <jar file>
+java -server -jar ms-pats-order-management-api.jar
+```
