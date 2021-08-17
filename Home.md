@@ -6,6 +6,4 @@
 
 - **[Kustomize Guide](./Kustomize-guide.md)**
 
-- **[Kustomize Guide](./Kustomize-guide.md)**
-
 - **[Winserver Information](./Winserver-information.md)**
