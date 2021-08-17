@@ -5,7 +5,7 @@ apt-get update
 apt-get install sudo
 sudo adduser platinum
 usermod -aG sudo platinum
-sudo apt install build-essential
+sudo apt install build-essential       (to download dev packages that includes libraries)
 
 sudo apt update
 sudo apt upgrade
@@ -56,5 +56,8 @@ which sh   |   bash                        (to find the path of the shell / bash
 pwd                                        (to find which path you are currently at)
 ps -ef | grep java                         (to see the specific process name that is running currently)
 kill <process id>                          (to kill a specific process)
+find . -name "application.properties"      (to find a certain file name in this directory)
+history | grep "java"                      (to find certain commands that you have typed in earlier)
+tail -n 500 adaptor.logs > DBS-logs.txt    (to show the last 500 lines of the log file and put it in another txt file)
 ```
 

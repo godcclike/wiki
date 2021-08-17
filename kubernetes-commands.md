@@ -1,0 +1,49 @@
+# Kubetnetes Commands
+
+## Kubernetes Deployments commands
+```Shell
+kubectl get deployments
+kubectl delete deployment <deployment name>
+kubectl apply -f <path-to-the-config.yml>
+kubectl rollout restart deploy <deployment name>
+```
+
+## Kubernetes Pods commands
+```Shell
+kubectl get pods
+kubectl delete pod <pod name>
+kubectl describe <pod name>
+```
+
+## Kubernetes Serivce commands
+```Shell
+kubectl get svc
+kubectl delete svc <svc name>
+```
+
+## Kubernetes Namespace commands
+```Shell
+kubectl get namespaces
+kubectl config view
+kubectl create namespace <new namespace>
+kubectl delete namespace <namespace>
+kubectl config set-context --current --namespace=<namespace>
+```
+
+## For troubleshooting
+```Shell
+kubectl logs -f <pod name>
+kubectl get secret
+kubectl config get-contexts
+kubectl config current-context
+kubectl config use-context <context name>
+```
+
+## Kube dashboard
+```Shell
+kubectl proxy --port=8080 --address=0.0.0.0 --disable-filter=true &
+
+aws eks get-token --cluster-name eks-cluster-ocbc | jq -r '.status.token'
+
+http://localhost:8080/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
+```
