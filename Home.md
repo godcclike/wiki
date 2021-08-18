@@ -1,25 +1,25 @@
 # Contents
 ---
-- **[Linux Basic Commands](./linux-basic-commands.md)**
+- **[Linux Basic Commands](linux-basic-commands)**
 
-- **[Git Comamnds](./Git-commands.md)**
+- **[Git Comamnds](Git-commands)**
 
-- **[Kubernetes Commands](./kubernetes-commands.md)**
+- **[Kubernetes Commands](kubernetes-commands)**
 
-- **[Docker Commands](./docker-commands.md)**
+- **[Docker Commands](docker-commands)**
 
-- **[Generating Certificates](./certificate.md)**
+- **[Generating Certificates](certificate)**
 
-- **[Kustomize Guide](./Kustomize-guide.md)**
+- **[Kustomize Guide](Kustomize-guide)**
 
-- **[Winserver Information](./Winserver-information.md)**
+- **[Winserver Information](Winserver-information)**
 
-- **[ArgoCD](./argocd.md)**
+- **[ArgoCD](argocd)**
 
-- **[PostgreSQL Commands](./postgresql-commands.md)**
+- **[PostgreSQL Commands](postgresql-commands)**
 
-- **[Kind Guide](./kind-guide.md)**
+- **[Kind Guide](kind-guide)**
 
-- **[Deployment Steps](./deployment-steps.md)**
+- **[Deployment Steps](deployment-steps)**
 
-- **[Troubleshooting ECN](./troubleshooting-ecn.md)**
+- **[Troubleshooting ECN](troubleshooting-ecn)**
