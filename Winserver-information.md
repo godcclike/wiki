@@ -29,7 +29,7 @@
 ## AWS web credentials
 > - IAM: platinum-dbs
 > - Username: mingxuan.zhang
-> - Password： tVV2&Z!4GgWN2  (Platinum@1)
+> - Password： #~4FG#n@x5  (Platinum@1)
 
 ## Root User Account
 > - Username: aws_sin_01@platinumanalytics.net
