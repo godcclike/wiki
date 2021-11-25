@@ -31,6 +31,10 @@
 > - Username: mingxuan.zhang
 > - Password： #~4FG#n@x5  (Platinum@1)
 
+> - IAM: platinum-dbs
+> - Username: sh-devops
+> - Password： lx)o9HEMNH4*NR#
+
 ## Root User Account
 > - Username: aws_sin_01@platinumanalytics.net
 > - Password： Welcome1234
