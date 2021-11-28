@@ -69,3 +69,7 @@
 aws ec2 describe-instances --filter "Name=tag:Name,Values=Gitlab-Runner" --query 'Reservations[].Instances[].[InstanceId]'          #to get the instance id (can also get from ec2 instance)
 aws ssm start-session --target i-08301447abe752fef
 ```
+
+## OCBC AWS repo
+> - Username: mingxuan.zhang-at-135793799950
+> - Password: wKzUWJaYeeOc5lZtqGPq7tbr4hDB+fMnuFAcchbTQN8=
