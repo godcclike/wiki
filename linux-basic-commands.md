@@ -75,8 +75,9 @@ java -server –jar <jar file>
 java -server -jar ms-pats-order-management-api.jar
 ```
 
-## To mount hard disk
+## To mount and unmount hard disk
 ```Shell
 lsblk -f  (to check disk partitions)
 mount /dev/sdc1 <location of where you want the drive to be>  (create one directory for it)
+umount <folder path>
 ```
