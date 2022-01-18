@@ -78,5 +78,5 @@ java -server -jar ms-pats-order-management-api.jar
 ## To mount hard disk
 ```Shell
 lsblk -f  (to check disk partitions)
-mount /dev/sdb1 <location of where you want the drive to be>  (create one directory for it)
+mount /dev/sdc1 <location of where you want the drive to be>  (create one directory for it)
 ```
