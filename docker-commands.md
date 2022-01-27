@@ -65,6 +65,6 @@ docker run --name ecn_dbs -itd 66ec55df389c
 docker exec -it <container ID> bash
 docker exec -it 8737bf49e179 bash
 
-docker image rm <image id>
 docker rm -f <container name>
+docker image rm <image id>
 ```
