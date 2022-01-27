@@ -50,3 +50,21 @@ docker exec -it c1 bash
 docker rm -f <container name>
 
 ```
+
+## For ECN
+```Shell
+docker load -i <filename.tar.gz>
+docker load -i ecn_dbs_prod_image.tar.gz
+
+docker images  (to get the image id)
+docker ps -a   (to get the container id)
+
+docker run --name <image name> -itd <image ID>
+docker run --name ecn_dbs -itd 66ec55df389c
+
+docker exec -it <container ID> bash
+docker exec -it 8737bf49e179 bash
+
+docker image rm <image id>
+docker rm -f <container name>
+```
