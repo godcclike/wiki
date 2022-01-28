@@ -40,7 +40,7 @@ aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS
 ## Create a container and going inside it
 ```Shell
 docker build -t <image name> .
-docker run –name <image name> -itd <name>
+docker run –-name <image name> -itd <name>
 docker exec -it <image name> bash
 
 docker build -t <image name> .
