@@ -37,6 +37,7 @@ kubectl get secret
 kubectl config get-contexts
 kubectl config current-context
 kubectl config use-context <context name>
+kubectl config use-context arn:aws:eks:ap-northeast-1:135793799950:cluster/eks-cluster-ocbc
 ```
 
 ## Kube dashboard
