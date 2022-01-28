@@ -25,6 +25,7 @@ sudo systemctl restart docker         #restart docker service
 docker run <image name>    #to run the docker image manually
 
 tail /var/log/docker.log    #to check docker logs
+docker logs <container ID>  #to check docker container logs
 ```
 
 ## Loging in to a remote repo
