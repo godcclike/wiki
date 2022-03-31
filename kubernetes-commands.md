@@ -48,3 +48,9 @@ aws eks get-token --cluster-name eks-cluster-ocbc | jq -r '.status.token'
 
 http://localhost:8080/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/#/login
 ```
+
+## Download a file from a pod
+```Shell
+kubectl cp shanghai-sit/ms-pats-simulator-5f49786d45-2tzkt:/app-build/<source file name> <target file name>
+kubectl cp shanghai-sit/ms-pats-simulator-5f49786d45-2tzkt:/app-build/heap.hprof.simulator.tar.gz   heap.hprof.simulator.tar.gz
+```
