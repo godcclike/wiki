@@ -56,6 +56,7 @@ docker rm -f <container name>
 ```Shell
 docker ps -a
 docker start <container name/id>
+docker stop <container name/id>
 
 ```
 
