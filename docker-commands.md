@@ -52,6 +52,13 @@ docker rm -f <container name>
 
 ```
 
+## Start a container
+```Shell
+docker ps -a
+docker start <container name/id>
+
+```
+
 ## For ECN
 ```Shell
 docker load -i <filename.tar.gz>
