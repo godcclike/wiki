@@ -29,7 +29,7 @@
 ## AWS web credentials
 > - IAM: platinum-dbs
 > - Username: mingxuan.zhang
-> - Password： #~4FG#n@x5  (Platinum@1)
+> - Password： #~4FG#n@x7
 
 > - IAM: platinum-dbs
 > - Username: sh-devops
