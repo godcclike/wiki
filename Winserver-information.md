@@ -1,9 +1,9 @@
 # Winserver Information
 
 ## SG1 Windows
-- Public DNS：ec2-52-199-184-194.ap-northeast-1.compute.amazonaws.com
+- Public DNS：ec2-35-72-181-243.ap-northeast-1.compute.amazonaws.com
 - User name：	Administrator
-- Password： bqOg)cyymW.f%%L.9n4mR!bguBg?%NI$
+- Password： D)a%r7=lCGRSxInawJB2xEYo.7R&jyKv
 
 ## Routers and Servers
 - 200.32.1.1 - SG1 Gateway
