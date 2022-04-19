@@ -54,3 +54,11 @@ http://localhost:8080/api/v1/namespaces/kubernetes-dashboard/services/https:kube
 kubectl cp shanghai-sit/ms-pats-simulator-5f49786d45-2tzkt:/app-build/<source file name> <target file name>
 kubectl cp shanghai-sit/ms-pats-simulator-5f49786d45-2tzkt:/app-build/heap.hprof.simulator.tar.gz   heap.hprof.simulator.tar.gz
 ```
+
+## Minikube
+```Shell
+kubectl create deployment <deployment name> --image=<image name>
+kubectl create deployment nginx-deployment --image=nginx
+kubectl get replicaset
+
+```
