@@ -60,5 +60,5 @@ kubectl cp shanghai-sit/ms-pats-simulator-5f49786d45-2tzkt:/app-build/heap.hprof
 kubectl create deployment <deployment name> --image=<image name>
 kubectl create deployment nginx-deployment --image=nginx
 kubectl get replicaset
-
+kubectl exec -it <pod name>
 ```
