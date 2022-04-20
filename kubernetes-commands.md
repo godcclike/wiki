@@ -30,7 +30,7 @@ kubectl delete namespace <namespace>
 kubectl config set-context --current --namespace=<namespace>
 ```
 
-## For troubleshooting
+## To change context
 ```Shell
 kubectl logs -f <pod name>
 kubectl get secret
@@ -61,4 +61,5 @@ kubectl create deployment <deployment name> --image=<image name>
 kubectl create deployment nginx-deployment --image=nginx
 kubectl get replicaset
 kubectl exec -it <pod name> bash
+kubectl get pod -o wide  (to see more details about all pods)
 ```
