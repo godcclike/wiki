@@ -33,7 +33,7 @@
 
 > - IAM: platinum-dbs
 > - Username: sh-devops
-> - Password： lx)o9HEMNH4*NR#
+> - Password： lx)o9HEMNH4*NR#1
 
 ## Root User Account
 > - Username: aws_sin_01@platinumanalytics.net
