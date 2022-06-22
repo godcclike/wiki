@@ -48,3 +48,10 @@ printf "%s\n\n" TestMessage1 | /opt/mqm/samp/bin/amqsput AH.OMS.ADAPTOR.PRICE.SO
 ```shell
 java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStorePassword=Welcome1 -Djavax.net.ssl.keyStore=clientKeystore.p12 -Djavax.net.ssl.keyStorePassword=Welcome1 -Dcom.ibm.mq.cfg.useIBMCipherMappings=false -cp ./com.ibm.mq.allclient-9.2.2.0.jar:./javax.jms-api-2.0.1.jar:. com.ibm.mq.samples.jms.JmsPutGet
 ```
+
+### Start ibmmq web
+```shell
+su - mqm
+cd /opt/mqm/bin
+strmqm
+```
