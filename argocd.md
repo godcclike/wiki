@@ -24,3 +24,20 @@ argocd account update-password
 ```Shell
 argocd cluster list
 ```
+
+## Commands
+```Shell
+argocd app list
+argocd app get <app name>
+argocd app history <app name>
+argocd app delete <app name>
+
+argocd app create <app name> \
+--project default \
+--repo https://github.com/<repo name> \
+--path "./<path to the code>" \
+--dest-namespace default \
+--dest-server https://kubernetes.default.svc
+
+argocd app sync <app name>
+```
