@@ -25,7 +25,7 @@ argocd account update-password
 argocd cluster list
 ```
 
-## Commands
+## Deploying and deleting argocd projects using CLI
 ```Shell
 argocd app list
 argocd app get <app name>
