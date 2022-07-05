@@ -53,5 +53,5 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 ```shell
 su - mqm
 cd /opt/mqm/bin
-strmqm
+strmqweb
 ```
