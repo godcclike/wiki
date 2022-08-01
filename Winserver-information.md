@@ -54,6 +54,9 @@
 > - Trader account: huangyi
 > - Password: Platinum1
 
+> - Monitoring account: ECN_Monitor
+> - Password: Welcome1
+
 ## ECN Web account (SCB)
 - http://180.169.143.107:10096/monitor
 > - Trader account: ecn_tester
