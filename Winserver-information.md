@@ -16,6 +16,14 @@
     > - Username: root
     > - Password: Qq!!1234@@
 
+- 200.32.1.25 - ECN Server 1 (bottom)
+    > - Username: USERID
+    > - Password: P@ssw0rd123
+
+- 200.32.1.26 - ECN Server 2 (upper)
+    > - Username: USERID
+    > - Password: P@ssw0rd123
+
 ## Office server
 - 192.168.0.10
     > - Username: platinum
