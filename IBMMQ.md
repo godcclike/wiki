@@ -1,19 +1,20 @@
 ### Change User
-> login with mqm user `su - mqm`
+| Syntax | Description |
+| ----------- | ----------- |
+| `su - mqm` | login with mqm |
 
 
 ### Create the Queue Manager
 ```shell
-$ . /opt/mqm/bin/setmqenv -n Installation1
-$ /opt/mqm/bin/crtmqm -lc -lf 65535 -lp 3 -ls 2 -u SYSTEM.DEAD.LETTER.QUEUE MQ_RATE_MANAGER
-$ /opt/mqm/bin/strmqm MQ_RATE_MANAGER
+. /opt/mqm/bin/setmqenv -n Installation1` |
+/opt/mqm/bin/crtmqm -lc -lf 65535 -lp 3 -ls 2 -u SYSTEM.DEAD.LETTER.QUEUE MQ_RATE_MANAGER` | 
+/opt/mqm/bin/strmqm MQ_RATE_MANAGER` |
 ```
 
 ### Create base objects within the Queue Manager
-
 ```shell
-$ . /opt/mqm/bin/setmqenv -n Installation1
-$ /opt/mqm/bin/runmqsc MQ_RATE_MANAGER << EOF
+. /opt/mqm/bin/setmqenv -n Installation1
+/opt/mqm/bin/runmqsc MQ_RATE_MANAGER << EOF
 
 /opt/mqm/bin/runmqsc MQ_RATE_MANAGER_5 < "/home/ubuntu/5-ibmq.mqsc"
 
@@ -32,8 +33,8 @@ ALTER AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS) AUTHTYPE(IDPWOS) CHCKCLNT(NONE)
 REFRESH SECURITY TYPE(CONNAUTH)
 dis AUTHINFO(SYSTEM.DEFAULT.AUTHINFO.IDPWOS)
 
-#DEFINE TOPIC(OMS.OCBC.RATE.TOPIC) TOPICSTR(RATETOPIC)
-#DEFINE TOPIC(OMS.OCBC.CHANGESOURCE.TOPIC) TOPICSTR(CHANGESOURCETOPIC)
+DEFINE TOPIC(OMS.OCBC.RATE.TOPIC) TOPICSTR(RATETOPIC)
+DEFINE TOPIC(OMS.OCBC.CHANGESOURCE.TOPIC) TOPICSTR(CHANGESOURCETOPIC)
 
 DEFINE QL(ah.oms.adaptor.price.source.queue)
 
@@ -50,8 +51,8 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 ```
 
 ### Start ibmmq web
-```shell
-su - mqm
-cd /opt/mqm/bin
-strmqweb
-```
+| Syntax | Description |
+| ----------- | ----------- |
+| `su - mqm` |
+| `cd /opt/mqm/bin` |
+| `strmqweb` |

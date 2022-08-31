@@ -56,10 +56,9 @@ kubectl cp shanghai-sit/ms-pats-simulator-5f49786d45-2tzkt:/app-build/heap.hprof
 ```
 
 ## Minikube
-```Shell
-kubectl create deployment <deployment name> --image=<image name>
-kubectl create deployment nginx-deployment --image=nginx
-kubectl get replicaset
-kubectl exec -it <pod name> bash
-kubectl get pod -o wide  (to see more details about all pods)
-```
+| Syntax | Description |
+| ----------- | ----------- |
+| `kubectl create deployment <deployment name> --image=<image name>` | kubectl create deployment nginx-deployment --image=nginx |
+| `kubectl get replicaset` |
+| `kubectl exec -it <pod name> bash` |
+| `kubectl get pod -o wide`  | to see more details about all pods |

@@ -11,16 +11,16 @@
 - **Step 1**:
 
     ```shell
-    $ curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
-    $ unzip awscliv2.zip
-    $ sudo ./aws/install
+    curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+    unzip awscliv2.zip
+    sudo ./aws/install
 
     ```
 
 - **Step 2**: configure aws-cli
 
     ```shell
-    $ aws configure
+    aws configure
     ```
 
 ### Creating Wildcard SSL Certificate.
@@ -28,12 +28,12 @@
 
     Install **Certbot**.
     ```shell
-    $ sudo apt install certbot
+    sudo apt install certbot
     ```
 - **Step 2**:
 
     ```shell
-    $ sudo certbot certonly --manual --preferred-challenges=dns --email akhil.ph@centelon.com \
+    sudo certbot certonly --manual --preferred-challenges=dns --email akhil.ph@centelon.com \
       --server https://acme-v02.api.letsencrypt.org/directory \
       --agree-tos --manual-public-ip-logging-ok -d "*.platinumecn.com"
 
@@ -51,56 +51,56 @@ Once the DNS challenge is successful, the certificate will be generated at **/et
 
     Creating **cacert** for **CAS**:
     ```shell
-    $ keytool -import -alias cas-qa.platinumecn.com -keystore $JAVA_HOME/jre/lib/security/cacerts \
+    keytool -import -alias cas-qa.platinumecn.com -keystore $JAVA_HOME/jre/lib/security/cacerts \
       -file fullchain1.pem -storepass changeit -noprompt
     ```
     Creating **Keystore** for **CAS**:
     ```shell
-    $ openssl pkcs12 -export -in fullchain1.pem -inkey privkey1.pem -out pats.p12 -name cas-qa.platinumecn.com
-    $ keytool -importkeystore -destkeystore keystore.jks -srckeystore pats.p12 -srcstoretype pkcs12 -alias cas-qa.platinumecn.com
-    $ keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.jks -deststoretype pkcs12
+    openssl pkcs12 -export -in fullchain1.pem -inkey privkey1.pem -out pats.p12 -name cas-qa.platinumecn.com
+    keytool -importkeystore -destkeystore keystore.jks -srckeystore pats.p12 -srcstoretype pkcs12 -alias cas-qa.platinumecn.com
+    keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.jks -deststoretype pkcs12
     ```
 - **Step 2**:
 
     Creating **cacert** for **oms-web**:
     ```shell
-    $ keytool -import -alias frontend-qa.platinumecn.com -keystore $JAVA_HOME/jre/lib/security/cacerts \
+    keytool -import -alias frontend-qa.platinumecn.com -keystore $JAVA_HOME/jre/lib/security/cacerts \
       -file fullchain1.pem -storepass changeit -noprompt
     ```
     Creating **Keystore** for **oms-web**:
     ```shell
-    $ openssl pkcs12 -export -in fullchain1.pem -inkey privkey1.pem -out pats.p12 -name frontend-qa.platinumecn.com
-    $ keytool -importkeystore -destkeystore keystore.jks -srckeystore pats.p12 -srcstoretype pkcs12 -alias frontend-qa.platinumecn.com
-    $ keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.jks -deststoretype pkcs12
+    openssl pkcs12 -export -in fullchain1.pem -inkey privkey1.pem -out pats.p12 -name frontend-qa.platinumecn.com
+    keytool -importkeystore -destkeystore keystore.jks -srckeystore pats.p12 -srcstoretype pkcs12 -alias frontend-qa.platinumecn.com
+    keytool -importkeystore -srckeystore keystore.jks -destkeystore keystore.jks -deststoretype pkcs12
     ```
 ### Login into AWS ECR.
 
 ```shell
-$ aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com
+aws ecr get-login-password --region ap-northeast-1 | docker login --username AWS --password-stdin 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com
 ```
 ### Building Docker images.
 > Do this for all micro services.
 ```shell
-$ docker build -t local-image:latest .
+docker build -t local-image:latest .
 ```
 ### Pushing docker images to ECR
 > Do this for all micro services.
 ```shell
-$ docker tag local-image:latest 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:v1
-$ docker tag local-image:latest 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:latest
-$ docker push 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:v1
-$ docker push 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:latest
+docker tag local-image:latest 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:v1
+docker tag local-image:latest 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:latest
+docker push 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:v1
+docker push 135793799950.dkr.ecr.ap-northeast-1.amazonaws.com/remote-image:latest
 ```
 
 ### Configure Kubectl.
 ```shell
-$ aws eks --region ap-northeast-1 update-kubeconfig --name eks-cluster-ocbc
-$ kubectl get ns
+aws eks --region ap-northeast-1 update-kubeconfig --name eks-cluster-ocbc
+kubectl get ns
 ```
 ### Creating TLS Secret for Ingress TLS
 > Rename the fullchain.pem to star.platinumecn.com.crt
 ```shell
-$ kubectl create secret tls oms-ssl --key privkey1.pem --cert star.platinumecn.com.crt
+kubectl create secret tls oms-ssl --key privkey1.pem --cert star.platinumecn.com.crt
 ```
 ### Ingress Controller Sample
 > Sample Ingress config for CAS.
@@ -139,19 +139,19 @@ spec:
 ### Useful Commands
 > To list all pods
 ```shell
-$ kubectl get pods -o wide
+kubectl get pods -o wide
 ```
 > To list all services
 ```shell
-$ kubectl get svc -o wide
+kubectl get svc -o wide
 ```
 > To list ingress
 ```shell
-$ kubectl get ing -o wide
+kubectl get ing -o wide
 ```
 > To rollout new deployment
 ```shell
-$ kubectl rollout restart deploy <deployment-name>
+kubectl rollout restart deploy <deployment-name>
 ```
 
 #### Notes

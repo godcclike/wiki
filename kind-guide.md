@@ -6,9 +6,9 @@ kubectl config get-contexts
 ```
 
 ## Change context between aws and kind
-```Shell
-kubectl config use-context <context name>     (from first command)
-```
+| Syntax | Description |
+| ----------- | ----------- |
+| `kubectl config use-context <context name>`     | copy the context from first command |
 
 ## To see the current context
 ```Shell
