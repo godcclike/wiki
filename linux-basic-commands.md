@@ -53,23 +53,17 @@
 | `curl --insecure -v https://www.google.com` | do it inside a container to check ssl certificate |
 | `which sh   "or"   bash`                       | to find the path of the shell / bash script |
 | `pwd`                                       | to find which path you are currently at | 
-
-```shell
-ps -ef | grep java  (to see the specific process name that is running currently)
-```
-
-| Syntax | Description |
-| ----------- | ----------- |
+| `ps -ef \| grep java`  | to see the specific process name that is running currently |
 | `kill "process id"`                         | to kill a specific process |
 | `find . -name "application.properties"`     | to find a certain file name in this directory |
-| `history | grep "java"`                     | to find certain commands that you have typed in earlier |
+| `history \| grep "java"`                     | to find certain commands that you have typed in earlier |
 | `tail -n 500 adaptor.logs > DBS-logs.txt`   | to show the last 500 lines of the log file and put it in another txt file |
 | `sudo rpm -ivh sample_file.rpm`             | to install RPM file using rpm command |
 
 ## To check opened vi session file and kill the session
 | Syntax | Description |
 | ----------- | ----------- |
-| `ps -ef grep vi` |
+| `ps -ef \| grep vi` |
 | `kill -9 17248` | “17248 = session id” |
 
 ## To run the .jar file
