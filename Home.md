@@ -28,4 +28,6 @@
 
 - **[IBMMQ Guide](IBMMQ)**
 
+- **[Terraform Cheatsheet](terraform-cheatsheet)**
+
 - **[Markdown Cheatsheet](markdown-cheatsheet)**
