@@ -1,7 +1,7 @@
 ### Change User
 | Syntax | Description |
 | ----------- | ----------- |
-| `su - mqm` | login with mqm |
+| `sudo su - mqm` | login with mqm |
 
 
 ### Create the Queue Manager
@@ -73,8 +73,8 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 | `runmqakm -cert -create -db key.kdb -stashed -dn "cn=qm,o=ibm,c=uk" -label ibmwebspheremqqm1` | create a self-signed certificate and private key and put them in the keystore |
 | `runmqakm -cert -extract -label ibmwebspheremqqm1 -db key.kdb -stashed -file QM.cert` | extract the queue manager certificate |
 | `cd /home/ubuntu` | change to home directory |
-| `keytool -keystore clientTruststore.p12 -storetype pkcs12 -storepass <put your password here!> -importcert -file /var/mqm/qmgrs/QM1/ssl/QM.cert -alias server-certificate` | create a client truststore and import the queue manager certificate |
-| `keytool -genkeypair -keyalg RSA -alias client-key -keystore clientKeystore.p12 -storepass <put_your_password_here> -storetype pkcs12` | create a public and private key pair |
+| `sudo keytool -keystore clientTruststore.p12 -storetype pkcs12 -storepass <put your password here!> -importcert -file /var/mqm/qmgrs/QM1/ssl/QM.cert -alias server-certificate` | create a client truststore and import the queue manager certificate |
+| `sudo keytool -genkeypair -keyalg RSA -alias client-key -keystore clientKeystore.p12 -storepass <put_your_password_here> -storetype pkcs12` | create a public and private key pair |
 | `keytool -list -v -keystore clientKeystore.p12` | to see the content of the cert like expiry date |
 | `keytool -export -alias client-key -file clientCertificate.crt -keystore clientKeystore.p12` | Extract the client certificate to the file clientCert.crt |
 | `cd /var/mqm/qmgrs/QM1/ssl` | move into the ssl directory for the queue manager |
