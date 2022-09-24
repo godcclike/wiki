@@ -59,6 +59,7 @@
 | `history \| grep "java"`                     | to find certain commands that you have typed in earlier |
 | `tail -n 500 adaptor.logs > DBS-logs.txt`   | to show the last 500 lines of the log file and put it in another txt file |
 | `sudo rpm -ivh sample_file.rpm`             | to install RPM file using rpm command |
+| `grep 35=8 <filename>` | to find specific string in a file |
 
 ## To check opened vi session file and kill the session
 | Syntax | Description |
