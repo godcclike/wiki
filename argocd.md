@@ -41,3 +41,11 @@ argocd app create <app name> \
 
 argocd app sync <app name>
 ```
+
+# argo rollouts commands
+| Syntax | Description |
+| ----------- | ----------- |
+| `kubectl argo rollouts list rollouts` | list all possible version of rollouts |
+| `kubectl argo rollouts status simple-rollout` | just to show the status of the rollouts |
+| `kubectl argo rollouts get rollout simple-rollout` | get the status on the rollout of the deployment name |
+| `kubectl argo rollouts get rollout simple-rollout --watch` | get the live status on the rollout of the deployment name |
