@@ -60,6 +60,7 @@
 | `tail -n 500 adaptor.logs > DBS-logs.txt`   | to show the last 500 lines of the log file and put it in another txt file |
 | `sudo rpm -ivh sample_file.rpm`             | to install RPM file using rpm command |
 | `grep 35=8 <filename>` | to find specific string in a file |
+| `sudo du -s * | sort -nr | head -n10` | to find the highest file/folder in the directory |
 
 ## To check opened vi session file and kill the session
 | Syntax | Description |
