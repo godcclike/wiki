@@ -8,5 +8,6 @@
     
 
 **To install the helm chart to your computer**
+
     helm install <label> <package repo>
     helm install mysql my-repo/mysql
