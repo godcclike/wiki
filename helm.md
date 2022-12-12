@@ -5,6 +5,11 @@
 
     helm repo add <label> <link-to-repo>
     helm repo add my-repo https://charts.bitnami.com/bitnami
+
+**To list all helm repo that you have added**
+
+    helm repo update
+    helm repo list
     
 **To install the helm chart to your kube cluster**
 
@@ -20,3 +25,10 @@
 
     helm uninstall <chart-name>
 
+**To show the values of the helm chart in the current directory**
+
+    helm show values .
+
+**To dry run helm and output the values into a file (use helm upgrade when changing values because it is already installed)**
+
+    helm upgrade ns2-stg-aw-use1-cca-01 .        --namespace ns2-stg-aw-use1-cca-01      -f ./environments/ns2-stg-aw-use1-cca-01.yml -f release_versions/release_1.10.0.yaml --dry-run --debug > testing.yml
