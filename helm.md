@@ -21,6 +21,15 @@
     helm list
     helm ls
 
+**To download the entire helm repo and untar it (you will get the charts.yml, values.yml to edit)**
+    
+    helm pull bitnami/mysql --untar=true
+
+**To install using your own downloaded repositories from earlier**
+
+    helm install <chart-name> </repository-path>
+    helm install <chart-name> .
+
 **To uninstall a helm chart**
 
     helm uninstall <chart-name>
