@@ -1,5 +1,8 @@
 # **Helm Commands**
 
+**To dry run helm and output the values into a file (use helm upgrade when changing values because it is already installed)**
+
+    helm upgrade ns2-stg-aw-use1-cca-01 .        --namespace ns2-stg-aw-use1-cca-01      -f ./environments/ns2-stg-aw-use1-cca-01.yml -f release_versions/release_1.10.0.yaml --dry-run --debug > testing.yml
 
 **To add the helm repo to your kube cluster**
 
@@ -30,6 +33,14 @@
     helm install <chart-name> </repository-path>
     helm install <chart-name> .
 
+**To create your own helm go template (it will consist of chart.yaml, charts folder, templates folder and values.yaml)**
+
+    helm create <template-folder-name>
+
+**To see your helm template from all your yaml files in that helm directory**
+
+    helm template .
+
 **To uninstall a helm chart**
 
     helm uninstall <chart-name>
@@ -37,7 +48,3 @@
 **To show the values of the helm chart in the current directory**
 
     helm show values .
-
-**To dry run helm and output the values into a file (use helm upgrade when changing values because it is already installed)**
-
-    helm upgrade ns2-stg-aw-use1-cca-01 .        --namespace ns2-stg-aw-use1-cca-01      -f ./environments/ns2-stg-aw-use1-cca-01.yml -f release_versions/release_1.10.0.yaml --dry-run --debug > testing.yml
