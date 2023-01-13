@@ -40,6 +40,10 @@ argocd app create <app name> \
 --dest-server https://kubernetes.default.svc
 
 argocd app sync <app name>
+
+argocd app create cca_api_dev --repo git@ghe.exm-platform.com:Telepathy-Labs/cca_api.git --path 10_deploy --dest-namespace argocd-demo-deployment --dest-server https://66F5D9B388DA3C87C24008F2D8B33F25.gr7.us-east-1.eks.amazonaws.com --values values.yaml --project ns1-dev-aw-use1-cca-01
+
+argocd app create reporting-service --repo git@ghe.exm-platform.com:Telepathy-Labs/reporting_service.git --path 10_deploy --dest-namespace argocd-demo-deployment --dest-server https://66F5D9B388DA3C87C24008F2D8B33F25.gr7.us-east-1.eks.amazonaws.com --values values.yaml --project ns1-dev-aw-use1-cca-01
 ```
 
 # argo rollouts commands
