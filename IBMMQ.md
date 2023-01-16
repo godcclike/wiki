@@ -60,7 +60,7 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 ### To see the contents of the SSL certificate
 | Syntax | Description |
 | ----------- | ----------- |
-| `keytool -list -keystore clientTruststore.p12` | to see the content of the cert like expiry date |
+| `keytool -v -list -keystore clientTruststore.p12` | to see the content of the cert like expiry date |
 | `base64 clientTruststore.p12` | to decrypt the public/private key values |
 
 ### To generate new mutual SSL cert
