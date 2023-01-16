@@ -84,3 +84,5 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 | `/opt/mqm/bin/runmqsc <Queue Manager name>` |
 | `REFRESH SECURITY(*) TYPE(SSL)` |
 | `exit` |
+| `cd /home/ubuntu` | go back to where the keystore and truststore is located |
+| `base64 clientTruststore.p12` | get the decoded value for keystore and truststore then paste it in the custom-service/service-kustomize/ssl-secrets |
