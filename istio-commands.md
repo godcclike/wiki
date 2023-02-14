@@ -20,6 +20,8 @@ kubectl get authorizationpolicy -n istio-system
 
 kubectl get authorizationpolicy dev01-policy -o yaml -n istio-system
 
+kubectl describe authorizationpolicy dev01-policy -n istio-system
+
 kubectl edit authorizationpolicy dev01-policy -n istio-system
 ```
 
