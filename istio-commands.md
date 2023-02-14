@@ -38,4 +38,26 @@ kubectl edit gw <gw-name> -n istio-system
 ```Shell
 kubectl port-forward service/cdk-web 3000:3000
 
+priv01-platform-ns1-dev-aw-use1-cca-01.dev.exm-platform.com
+a6ebc164d4dcc4781a328356064bb007-9b25b9d3b6247fc7.elb.us-east-1.amazonaws.com
+
+
+https://priv01-platform-ns1-dev-aw-use1-cca-01.dev.exm-platform.com/cdkweb/login
+
+https://priv01-ns1-dev-aw-use1-cca-01.dev.exm-platform.com/converse/health
+
+https://cdk-onboarding.dev.exm-platform.com/cdkweb/login
+
+istio system - NS - Authorizationpolicy
+
+pf -ns1 - vs
+
+URL name - pf-ns1…
+
+kubectl port-forward service/cdk-web 3000:3000
+
+pf-ns1 — running pod
+
+kubectl edit gw dev01-private-gw -n istio-system
+
 ```
