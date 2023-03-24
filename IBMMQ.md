@@ -66,6 +66,9 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 ### To generate new mutual SSL cert
 | Syntax | Description |
 | ----------- | ----------- |
+| `su - mqm` | login to mqm user |
+| `cd home/ubuntu` | 
+| `sudo rm -rf client*` | remove previous keystore and truststore |  
 | `cd /var/mqm/qmgrs/QM1/ssl` | move into the ssl directory for the queue manager |
 | `runmqakm -keydb -create -db key.kdb -pw <password> -stash` | Create a keystore (a .kdb file) using the MQ security tool |
 | `sudo chgrp mqm *` | change owner of all files |
@@ -85,4 +88,5 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 | `REFRESH SECURITY(*) TYPE(SSL)` |
 | `exit` |
 | `cd /home/ubuntu` | go back to where the keystore and truststore is located |
-| `base64 clientTruststore.p12` | get the decoded value for keystore and truststore then paste it in the custom-service/service-kustomize/ssl-secrets |
+| `base64 clientTruststore.p12` | get the decoded value for keystore and truststore then paste it in the OCBC-Kube_config/custom-service/service-kustomize/ssl-secrets repo |
+| `base64 clientKeystore.p12` | get the decoded value for keystore and truststore then paste it in the OCBC-Kube_config/custom-service/service-kustomize/ssl-secrets repo |
