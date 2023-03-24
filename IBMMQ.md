@@ -76,7 +76,7 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 | `sudo keytool -keystore clientTruststore.p12 -storetype pkcs12 -storepass <put your password here!> -importcert -file /var/mqm/qmgrs/QM1/ssl/QM.cert -alias server-certificate` | create a client truststore and import the queue manager certificate |
 | `sudo keytool -genkeypair -keyalg RSA -alias client-key -keystore clientKeystore.p12 -storepass <put_your_password_here> -storetype pkcs12` | create a public and private key pair |
 | `keytool -list -v -keystore clientKeystore.p12` | to see the content of the cert like expiry date |
-| `keytool -export -alias client-key -file clientCertificate.crt -keystore clientKeystore.p12` | Extract the client certificate to the file clientCert.crt |
+| `sudo keytool -export -alias client-key -file clientCertificate.crt -keystore clientKeystore.p12` | Extract the client certificate to the file clientCert.crt |
 | `cd /var/mqm/qmgrs/QM1/ssl` | move into the ssl directory for the queue manager |
 | `runmqakm -cert -add -db key.kdb -stashed -label ibmwebspheremqapp -file /home/ubuntu/clientCertificate.crt` | add that certificate to the queue manager's key repository, so the server knows that it can trust the client |
 | `runmqakm -cert -list -db key.kdb -stashed` | List the certificates in the key repository |
