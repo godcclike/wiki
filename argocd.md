@@ -1,4 +1,12 @@
-# Argo CD commands
+# Argo CD commands Telepathy
+
+## To access ArgoCD in browser
+https://argocd-prd.exm-platform.com/
+
+## Staging cluster
+https://FBA4A4F330B85FBE006FCC8CA9E7D08C.gr7.us-east-1.eks.amazonaws.com
+
+# Argo CD commands Platinum
 
 ## To access ArgoCD in browser
 ```Shell
