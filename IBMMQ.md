@@ -74,8 +74,8 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 | `runmqakm -keydb -create -db key.kdb -pw Welcome1 -stash` | Create a keystore (a .kdb file) using the MQ security tool |
 | `sudo chgrp mqm *` | change owner of all files |
 | `sudo chmod 640 *` | change permission of all files |
-| `runmqakm -cert -create -db key.kdb -stashed -dn "cn=qm,o=ibm,c=uk" -label <queue-manager-name>` | create a self-signed certificate and private key and put them in the keystore |
-| `runmqakm -cert -extract -label <queue-manager-name> -db key.kdb -stashed -file QM.cert` | extract the queue manager certificate |
+| `runmqakm -cert -create -db key.kdb -stashed -dn "cn=qm,o=ibm,c=uk" -label ibmwebspheremqqm1` | create a self-signed certificate and private key and put them in the keystore |
+| `runmqakm -cert -extract -label ibmwebspheremqqm1 -db key.kdb -stashed -file QM.cert` | extract the queue manager certificate |
 | `cd /home/ubuntu` | change to home directory |
 | `sudo keytool -keystore clientTruststore.p12 -storetype pkcs12 -storepass Welcome1 -importcert -file /var/mqm/qmgrs/<queue-manager-name>/ssl/QM.cert -alias server-certificate` | create a client truststore and import the queue manager certificate |
 | `sudo keytool -genkeypair -keyalg RSA -alias client-key -keystore clientKeystore.p12 -storepass Welcome1 -storetype pkcs12` | create a public and private key pair |
