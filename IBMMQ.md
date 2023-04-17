@@ -67,9 +67,10 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 | Syntax | Description |
 | ----------- | ----------- |
 | `su - mqm` | login to mqm user |
-| `cd home/ubuntu` | 
+| `cd /home/ubuntu` | 
 | `sudo rm -rf client*` | remove previous keystore and truststore |  
-| `cd /var/mqm/qmgrs/QM1/ssl` | move into the ssl directory for the queue manager |
+| `cd /var/mqm/qmgrs/<queue-manager-name>/ssl` | move into the ssl directory for the queue manager |
+| `sudo rm - rf *` | remove everything here to create new |
 | `runmqakm -keydb -create -db key.kdb -pw <password> -stash` | Create a keystore (a .kdb file) using the MQ security tool |
 | `sudo chgrp mqm *` | change owner of all files |
 | `sudo chmod 640 *` | change permission of all files |
