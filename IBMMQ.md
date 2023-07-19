@@ -71,7 +71,7 @@ java -Djavax.net.ssl.trustStore=clientTruststore.p12 -Djavax.net.ssl.trustStoreP
 | `sudo rm -rf client*` | remove previous keystore and truststore |  
 | `cd /var/mqm/qmgrs/<queue-manager-name>/ssl` | move into the ssl directory for the queue manager |
 | `sudo rm -rf *` | remove everything here to create new |
-| `runmqakm -keydb -create -db key.kdb -pw Welcome1 -stash` | Create a keystore (a .kdb file) using the MQ security tool |
+| `runmqakm -keydb -create -db key.kdb -pw Welcome1 -expire 365 -stash` | Create a keystore (a .kdb file) using the MQ security tool |
 | `sudo chgrp mqm *` | change owner of all files |
 | `sudo chmod 640 *` | change permission of all files |
 | `runmqakm -cert -create -db key.kdb -stashed -dn "cn=qm,o=ibm,c=uk" -label <Cert Label>` | create a self-signed certificate and private key and put them in the keystore |
